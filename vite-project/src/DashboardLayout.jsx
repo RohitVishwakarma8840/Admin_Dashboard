@@ -1,6 +1,7 @@
 import React from 'react';
 import { Box } from '@mui/material';
 import LeftBar from './LeftBar';
+import Rightbar from './Rightbar';
 
 function DashboardLayout() {
   return (
@@ -15,10 +16,11 @@ function DashboardLayout() {
 
    {/* Left Bar */}
    <Box sx={{
-    width:'20%',
+    width:'18%',
     height:'100vh',
     
     backgroundColor:'#5041BC'
+    // backgroundColor:'#5041BC'
    }}>
     <LeftBar/>
 
@@ -27,13 +29,15 @@ function DashboardLayout() {
 
    {/* Right Bar */}
    <Box sx={{
-    width:'80%',
+    width:'82%',
     height:'100vh',
     backgroundColor:'white',
     borderRadius:'20px',
     border:'1px solid black',
     
    }}>
+
+    <Rightbar/>
 
 
    </Box>
