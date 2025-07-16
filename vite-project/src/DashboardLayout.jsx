@@ -34,7 +34,7 @@ function DashboardLayout() {
     height:'100vh',
     backgroundColor:'white',
     borderRadius:'20px',
-    border:'1px solid black',
+    
     
    }}>
 

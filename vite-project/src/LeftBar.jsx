@@ -163,6 +163,7 @@ function LeftBar() {
       <h5>Health</h5>
     </Box>
   </Box>
+
 </Box>
 
 
@@ -197,12 +198,45 @@ function LeftBar() {
         
        }}>
         
-        <img src="plane.jpg" alt="" style={{ height: '80%', width: '80%' }} />
+        {/* <img src="plane.jpg" alt="" style={{ height: '80%', width: '80%', }} /> */}
 
 
-        <p style={{
-            height:'80%', width:'80%',textAlign:'center'
-        }}>Want to Upgrade</p>
+        <Box
+  component="img"
+  src="plane.jpg"
+  alt=""
+  sx={{
+    height: {
+      xs: '40%',   // extra-small 
+      sm: '50%',   // small 
+      md: '80%',   // medium
+    },
+    width: {
+      xs: '50%',
+      sm: '60%',
+      md: '80%',
+    },
+   
+  }}
+/>
+
+
+        <Box sx={{
+            height: {
+           lg:'100%', sm:'80%',md:'40%'
+            },
+            width:{
+              lg:'100%',sm:'80%',md:'40%',
+            },
+              fontSize: {
+    xs: '16px',
+    sm: '14px',
+    md: '14px',
+    lg: '17px',
+    xl:'24px',
+  },
+            textAlign:'center'
+        }}>Want to Upgrade</Box>
 
       
   

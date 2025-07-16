@@ -4,12 +4,13 @@ import { InputAdornment } from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
 import TableComponent from './TableComponent';
 import Cards from './Cards';
+import Graph from './Graph';
 
 function Rightbar() {
   return (
     <>
 
-
+    
 
 
  {/* Navbar */}
@@ -23,6 +24,8 @@ function Rightbar() {
         // paddingLeft:'8px',
         paddingTop:'1vh',
         paddingLeft:'1vw',
+        display:'flex',
+        alignItems:'center',
         
      
     }}>
@@ -50,17 +53,19 @@ function Rightbar() {
           Overview
         </Typography>
 
+        </Box>
+
         
         <Box 
         sx={{
           // marginLeft:'300px',
-          marginLeft:'20vw',
+          marginRight:'2vw',
           display:'flex',
           alignItems:'center',
           // textAlign:'end',
           
-          justifyContent:'center',
-          gap:6,
+          justifyContent:'flex-end',
+          gap:5,
           // gap:'5vw',
         
 
@@ -115,7 +120,13 @@ function Rightbar() {
 
           <img src="Profile icon.jpg" alt="" />
 
-          <Typography>Danielle Campbell</Typography>
+          <Typography
+            sx={{
+              textWrap:'nowrap',
+              fontFamily:'Nunito'
+            }}
+        
+          >Danielle Campbell</Typography>
           
           <img src="downArrow.png" alt="" />
 
@@ -128,7 +139,7 @@ function Rightbar() {
     </Box>
 
 
-    </Box>
+    
 
 
 
@@ -139,8 +150,9 @@ function Rightbar() {
   {/* Table */}
   <Box sx={{
     width:'100%',
-    height:'45vh',
+    height:'42vh',
     backgroundColor:'white',
+    
 
   }}>
 
@@ -165,8 +177,9 @@ function Rightbar() {
  {/* Cards */}
  <Box sx={{
     width:'100%',
-    height:'12vh',
+    height:'18vh',
     backgroundColor:'white',
+   
  }}>
     
     <Cards/>
@@ -180,22 +193,31 @@ function Rightbar() {
  {/* Page Bottom */}
  <Box sx={{
     width:'100%',
-    height:'33vh',
+    height:'31vh',
     backgroundColor:'white',
     display:'flex',
-    px:1,
+    px:0,
+    alignItems:'center',
+    justifyContent:'center',
+    marginTop:0,
  }}>
  
 
-   <Box sx={{width:'60%',height:'100%',backgroundColor:''}}></Box> 
-    <Box sx={{width:'40%',height:'100%',backgroundColor:'',}}> 
+   <Box sx={{width:'60%',height:'100%',display:'flex',alignItems:"center"}}>
+    {/* <Graph/> */}
+    <img src="graph card.jpg" alt="" style={{width:'100%',height:'94%',objectFit:'contain',display:'block'}}/>
+    </Box> 
+    <Box sx={{width:'40%',height:'100%',display:'flex',alignItems:"center",}}> 
+
+    <img src="colored_graph.jpg" alt="" style={{width:'100%',height:'94%',
+      objectFit:"contain",
+      
+      }} />
 
 
+   
 
-
-   {/* <img src="colored_graph.jpg" alt="" /> */}
-
-   </Box>
+    </Box> 
 
 
 

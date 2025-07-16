@@ -56,11 +56,14 @@ function Cards() {
         display: 'flex',
         gap:1,
         paddingX: 1,
+        paddingY:0,
+        marginY:0,
         minWidth:'800px',
         justifyContent: 'center', 
         flexWrap: 'wrap', 
         backgroundColor: 'white',
         height:'100%',
+        
        
          
       }}
@@ -71,8 +74,9 @@ function Cards() {
           key={index} 
           sx={{
              flexGrow: 1, 
-            minWidth: '250px', 
-            maxWidth: '300px',
+            // minWidth: '250px', 
+            // maxWidth: '300px',
+            width:'18%',
             bgcolor: 'white',
             display: 'flex',
             justifyContent: 'space-between',
@@ -90,7 +94,7 @@ function Cards() {
               gap: 0.4,
             }}
           >
-            <Typography sx={{ color: '#6c757d', fontWeight: '500' }}>
+            <Typography sx={{ color: '#6c757d', fontWeight: '500',fontFamily:'Nunito', }}>
               {card.heading}
             </Typography>
             <Typography sx={{ fontWeight: '600', fontSize: '1.4rem' }}>
@@ -132,7 +136,7 @@ function Cards() {
                 sx={{ fontSize: '24px', color: '#563acc' }}
               />
             </Box>
-            <Link href="#" sx={{ fontSize: '0.875rem', textDecoration: 'none' }}>
+            <Link href="#" sx={{ fontSize: '0.875rem', textDecoration: 'none',fontFamily:'Nunito' }}>
               View More
             </Link>
           </Box>
