@@ -10,29 +10,32 @@ function SalesTable() {
   ];
 
   return (
-    <Box sx={{ width: '100%', backgroundColor: '#fff', padding: '16px', borderRadius: '20px' }}>
-      <Typography  sx={{ fontWeight: '600', marginBottom: '16px', color: '#333' }}>
+    <Box sx={{ width: '100%', backgroundColor: '#fff', padding: '8px', borderRadius: '20px' }}>
+      <Typography  sx={{ fontWeight: '600', marginBottom: '8px', color: '#333' }}>
         Top Sales Representative
       </Typography>
       <Table>
        
-        <TableBody>
+        <TableBody sx={{
+          backgroundColor:'black'
+        
+        }}>
           {data.map((row, index) => (
             <TableRow
               key={index}
               sx={{
                 backgroundColor: 'white',
-                borderRadius: '8px',
-                marginBottom: '8px',
+                marginBottom: '0px',
                 border:'1px solid #EBE8FF',
-                borderRadius:'30px',
+                borderRadius: '30px',
+              
 
                 // '&:last-child': { marginBottom: 0 },
                 '& td': { border: 'none', padding: '4px' },
               }}
             >
               <TableCell>
-              <TableCell sx={{ color: '#333', fontSize: '14px' }}>{row.name}</TableCell>
+              <TableCell sx={{ color: '#333', fontSize: '3px' }}>{row.name}</TableCell>
               </TableCell>
             
               <TableCell sx={{ color: '#black', fontSize: '14px',fontWeight:'600' }}>{row.P}</TableCell>

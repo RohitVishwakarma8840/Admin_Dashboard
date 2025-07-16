@@ -3,6 +3,7 @@ import {Box,Typography,TextField} from '@mui/material'
 import { InputAdornment } from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
 import TableComponent from './TableComponent';
+import Cards from './Cards';
 
 function Rightbar() {
   return (
@@ -15,22 +16,25 @@ function Rightbar() {
     <Box 
     sx={{
         width:'100%',
-        height:'10vh',
+        height:'8vh',
         backgroundColor:'white',
         // px:1,
         // paddingTop:'8px',
         // paddingLeft:'8px',
         paddingTop:'1vh',
         paddingLeft:'1vw',
+        
      
     }}>
      
 
      <Box sx={{
         display:'flex',
+
         alignItems:'center',
         justifyContent:'flex-start',
          width:'100%',
+         
         
      }}>
      
@@ -53,6 +57,7 @@ function Rightbar() {
           marginLeft:'20vw',
           display:'flex',
           alignItems:'center',
+          // textAlign:'end',
           
           justifyContent:'center',
           gap:6,
@@ -134,7 +139,7 @@ function Rightbar() {
   {/* Table */}
   <Box sx={{
     width:'100%',
-    height:'50vh',
+    height:'45vh',
     backgroundColor:'white',
 
   }}>
@@ -160,9 +165,13 @@ function Rightbar() {
  {/* Cards */}
  <Box sx={{
     width:'100%',
-    height:'15vh',
+    height:'12vh',
     backgroundColor:'white',
- }}></Box>
+ }}>
+    
+    <Cards/>
+
+ </Box>
 
 
 
@@ -171,9 +180,26 @@ function Rightbar() {
  {/* Page Bottom */}
  <Box sx={{
     width:'100%',
-    height:'20vh',
+    height:'33vh',
     backgroundColor:'white',
- }}></Box>
+    display:'flex',
+    px:1,
+ }}>
+ 
+
+   <Box sx={{width:'60%',height:'100%',backgroundColor:''}}></Box> 
+    <Box sx={{width:'40%',height:'100%',backgroundColor:'',}}> 
+
+
+
+
+   {/* <img src="colored_graph.jpg" alt="" /> */}
+
+   </Box>
+
+
+
+ </Box>
 
       
     </>
