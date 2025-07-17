@@ -1,6 +1,6 @@
 import React from 'react';
 import { Box, Table, TableBody, TableCell, TableHead, TableRow, Typography, Avatar } from '@mui/material';
-
+import MoreVertIcon from '@mui/icons-material/MoreVert';
 function SalesTable() {
   const data = [
     { name: <img src="Profile icon.jpg" alt="" /> ,P:'Nicholas Patrick',sales: '$2540.58', products: '150 products', premium: '105 premium', status: '+Gold', avatar: 'path/to/nicholas.jpg', },
@@ -46,9 +46,11 @@ function SalesTable() {
               <TableCell sx={{ color: '#000', fontSize: '14px',fontWeight:'600' }}>{row.sales}</TableCell>
               <TableCell sx={{ color: '#333', fontSize: '14px',fontFamily:'Nunito' }}>{row.products}</TableCell>
               <TableCell sx={{ color: '#333', fontSize: '14px',fontFamily:'Nunito' }}>{row.premium}</TableCell>
+
               <TableCell sx={{ color: row.status === '+Gold' ? '#F5A623' : '#34A853', fontWeight: 'bold' }}>
                 {row.status}
               </TableCell>
+              <TableCell><MoreVertIcon/></TableCell>
             </TableRow>
           ))}
         </TableBody>

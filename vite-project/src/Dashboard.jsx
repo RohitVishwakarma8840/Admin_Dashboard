@@ -5,8 +5,18 @@ import SearchIcon from '@mui/icons-material/Search';
 import TableComponent from './TableComponent';
 import Cards from './Cards';
 import Graph from './Graph';
+import NotificationsIcon from '@mui/icons-material/Notifications';
 
-function Rightbar() {
+function Dashboard() {
+
+
+
+
+
+
+
+
+
   return (
     <>
 
@@ -26,6 +36,7 @@ function Rightbar() {
         paddingLeft:'1vw',
         display:'flex',
         alignItems:'center',
+      
         
      
     }}>
@@ -98,6 +109,11 @@ function Rightbar() {
       
       borderRadius: '37px',
     },
+       
+   '& ::placeholder': {
+  color: 'blue',
+},
+
     '& .MuiInputBase-input': {
       padding: '8px 8px', 
     },
@@ -115,7 +131,7 @@ function Rightbar() {
 
 
 
-          <i class="ri-notification-3-fill"></i>
+          <NotificationsIcon sx={{color:'#5041BC'}}/>
 
 
           <img src="Profile icon.jpg" alt="" />
@@ -193,13 +209,14 @@ function Rightbar() {
  {/* Page Bottom */}
  <Box sx={{
     width:'100%',
-    height:'31vh',
+    height:'30vh',
     backgroundColor:'white',
     display:'flex',
     px:0,
     alignItems:'center',
     justifyContent:'center',
     marginTop:0,
+  
  }}>
  
 
@@ -209,7 +226,7 @@ function Rightbar() {
     </Box> 
     <Box sx={{width:'40%',height:'100%',display:'flex',alignItems:"center",}}> 
 
-    <img src="colored_graph.jpg" alt="" style={{width:'100%',height:'94%',
+    <img src="colored_graph.jpg" alt="" style={{width:'100%',height:'100%',
       objectFit:"contain",
       
       }} />
@@ -228,4 +245,4 @@ function Rightbar() {
   )
 }
 
-export default Rightbar
+export default Dashboard

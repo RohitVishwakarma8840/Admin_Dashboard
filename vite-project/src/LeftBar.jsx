@@ -3,7 +3,11 @@ import { Box, color, textAlign } from '@mui/system'
 import { Divider } from '@mui/material'
 import {Button} from '@mui/material'
 
-function LeftBar() {
+function LeftBar({
+  activeTab,setActiveTab
+}) {
+
+  
   return (
     <>
       
@@ -73,11 +77,14 @@ function LeftBar() {
         height: '20%',
         paddingLeft: '20px', // Optional: consistent left padding for alignment
         '&:hover': {
-          backgroundColor: 'white',
-          color: 'blue',
+       backgroundColor: activeTab === 'Dashboard' ? 'white' : 'transparent',
+    color: activeTab === 'Dashboard' ? 'blue' : 'white',
+         
           height:'20%',
         },
       }}
+
+      onClick={() => setActiveTab('Dashboard')}
     >
       <i className="ri-layout-grid-fill"></i>
       <h5>Dashboard</h5>
@@ -93,11 +100,14 @@ function LeftBar() {
         height: '20%',
         paddingLeft: '20px',
         '&:hover': {
-          backgroundColor: 'white',
-          color: 'blue',
+        backgroundColor: activeTab === 'Subscriptions' ? 'white' : 'transparent',
+    color: activeTab === 'Subscriptions' ? 'blue' : 'white',
           height:'20%',
         },
       }}
+      
+       onClick = {() =>setActiveTab('Subscriptions')}
+       
     >
       <i className="ri-dashboard-horizontal-fill"></i>
       <h5>Subscriptions</h5>
@@ -113,11 +123,12 @@ function LeftBar() {
         height: '20%',
         paddingLeft: '20px',
         '&:hover': {
-          backgroundColor: 'white',
-          color: 'blue',
+              backgroundColor: activeTab === 'Claims' ? 'white' : 'transparent',
+    color: activeTab === 'Claims' ? 'blue' : 'white',
           height:'20%',
         },
       }}
+      onClick = {() => setActiveTab('Claims')}
     >
       <i className="ri-article-line"></i>
       <h5>Claims</h5>
@@ -133,11 +144,13 @@ function LeftBar() {
         height: '20%',
         paddingLeft: '20px',
         '&:hover': {
-          backgroundColor: 'white',
-          color: 'blue',
+           backgroundColor: activeTab === 'Biller Queue' ? 'white' : 'transparent',
+    color: activeTab === 'Biller Queue' ? 'blue' : 'white',
           height:'20%',
         },
       }}
+
+      onClick = {()=> setActiveTab('Biller Queue')}
     >
       <i className="ri-survey-line"></i>
       <h5>Biller Queue</h5>
@@ -153,11 +166,12 @@ function LeftBar() {
         height: '20%',
         paddingLeft: '20px',
         '&:hover': {
-          backgroundColor: 'white',
-          color: 'blue',
+            backgroundColor: activeTab === 'Health' ? 'white' : 'transparent',
+    color: activeTab === 'Health' ? 'blue' : 'white',
           height:'20%',
         },
       }}
+      onClick = {()=>setActiveTab('Health')}
     >
       <i className="ri-heart-2-fill"></i>
       <h5>Health</h5>
@@ -207,14 +221,18 @@ function LeftBar() {
   alt=""
   sx={{
     height: {
-      xs: '40%',   // extra-small 
-      sm: '50%',   // small 
+      xs: '20%',   // extra-small 
+      sm: '35%',   // small 
       md: '80%',   // medium
+      xl:'50%',
+      lg:'55%',
     },
     width: {
-      xs: '50%',
-      sm: '60%',
+      xs: '20%',
+      sm: '35%',
       md: '80%',
+      lg:'55%',
+      xl:'50%',
     },
    
   }}
@@ -232,8 +250,8 @@ function LeftBar() {
     xs: '16px',
     sm: '14px',
     md: '14px',
-    lg: '17px',
-    xl:'24px',
+    lg: '1rem',
+    xl:'1.5rem',
   },
             textAlign:'center'
         }}>Want to Upgrade</Box>
@@ -257,6 +275,11 @@ function LeftBar() {
     // width:'140px',
     width:'9vw',
     height:'7vh',
+    fontSize:{
+      lg:'1rem',
+      xl:'1.2rem',
+      
+    }
   }}
 >
   Upgrade Now
