@@ -39,11 +39,11 @@ function SalesTable() {
               }}
             >
               <TableCell>
-              <TableCell sx={{ color: '#333', fontSize: '3px' }}>{row.name}</TableCell>
+              <TableCell sx={{ color: '#333', fontSize: '3px',fontFamily:'Nunito' }}>{row.name}</TableCell>
               </TableCell>
             
-              <TableCell sx={{ color: '#797D8C', fontSize: '14px',fontWeight:'500' }}>{row.P}</TableCell>
-              <TableCell sx={{ color: '#000', fontSize: '14px',fontWeight:'600' }}>{row.sales}</TableCell>
+              <TableCell sx={{ color: '#797D8C', fontSize: '14px',fontWeight:'500',fontFamily:'Nunito' }}>{row.P}</TableCell>
+              <TableCell sx={{ color: '#000', fontSize: '14px',fontWeight:'600',fontFamily:'Nunito',fontWeight:'700' }}>{row.sales}</TableCell>
               <TableCell sx={{ color: '#333', fontSize: '14px',fontFamily:'Nunito' }}>{row.products}</TableCell>
               <TableCell sx={{ color: '#333', fontSize: '14px',fontFamily:'Nunito' }}>{row.premium}</TableCell>
 

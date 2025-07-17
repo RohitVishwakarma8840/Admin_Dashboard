@@ -16,6 +16,7 @@ function Cards() {
       changeColor: 'success.main',
       iconClass: 'ri-shopping-cart-line',
       iconBgColor: '#E5DFFF',
+      bgcolor:'#A7F0BA'
     },
     {
       heading: 'Total Profit',
@@ -24,6 +25,7 @@ function Cards() {
       changeColor: 'success.main',
       iconClass: 'ri-wallet-3-line',
       iconBgColor: '#DFFFE2',
+      bgcolor:'#0000ff60',
     },
     {
       heading: 'New Customers',
@@ -31,7 +33,8 @@ function Cards() {
       change: '-7%',
       changeColor: 'error.main',
       iconClass: 'ri-user-add-line',
-      iconBgColor: '#FFE1E1',
+      iconBgColor: 'white',
+      bgcolor:'#ffc0cb57'
     },
     {
       heading: 'Total Revenue',
@@ -40,6 +43,7 @@ function Cards() {
       changeColor: 'success.main',
       iconClass: 'ri-pie-chart-line',
       iconBgColor: '#FFF3D8',
+      bgcolor:'#ffa60033'
     },
   ];
 
@@ -77,7 +81,8 @@ function Cards() {
             // minWidth: '250px', 
             // maxWidth: '300px',
             width:'18%',
-            bgcolor: 'white',
+             backgroundColor: card.bgcolor,
+           
             display: 'flex',
             justifyContent: 'space-between',
             alignItems: 'flex-start',
