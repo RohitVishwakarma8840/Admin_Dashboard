@@ -5,11 +5,28 @@ import SearchIcon from '@mui/icons-material/Search';
 import TableComponent from './TableComponent';
 import Cards from './Cards';
 import Graph from './Graph';
+import { useState } from 'react';
 import NotificationsIcon from '@mui/icons-material/Notifications';
+import CloseIcon from '@mui/icons-material/Close';
+import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 
 function Dashboard() {
 
 
+   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
+  const handleDropdownToggle = () => {
+    setIsDropdownOpen((prevState) => !prevState);
+  };
+
+  const handleOptionClick = (option) => {
+    console.log(`${option} clicked!`);
+    setIsDropdownOpen(false); 
+  };
+
+  const closeDropdown= () => {
+    setIsDropdownOpen(false);
+  }
 
 
 
@@ -144,7 +161,65 @@ function Dashboard() {
         
           >Danielle Campbell</Typography>
           
-          <img src="downArrow.png" alt="" />
+          <img src="downArrow.png" alt=""  onClick={handleDropdownToggle} width={'10px'} height={'10px'}/>
+
+
+           {/* Dropdown  - Conditionally Rendereding happening */}
+    {isDropdownOpen && (
+      <Box
+        sx={{
+          position: 'absolute',
+          top: '8%', 
+          right: '1%',
+          backgroundColor: 'white',
+          boxShadow: '0px 4px 10px rgba(0, 0, 0, 0.1)', 
+          borderRadius: '8px',
+          minWidth: '180px',
+          display: 'flex',
+          flexDirection: 'column',
+          padding: '8px', 
+        }}
+      >
+
+        <Box sx={{
+          display:'flex', justifyContent:'space-between',alignItems:'center'
+        }}>
+        <Typography
+          onClick={() => handleOptionClick('Login')}
+          sx={{
+            py: '8px',
+            px: '16px',
+            cursor: 'pointer',
+            fontFamily:'Nunito',
+            '&:hover': {
+              backgroundColor: '#f0f0f0',
+            },
+          }}
+        >
+          Logout
+        </Typography>
+
+ <CloseIcon onClick={closeDropdown}/>
+
+
+
+        </Box>
+        <Typography
+          onClick={() => handleOptionClick('Profile')}
+          sx={{
+            py: '8px',
+            px: '16px',
+            cursor: 'pointer',
+            fontFamily:'Nunito',
+            '&:hover': {
+              backgroundColor: '#f0f0f0',
+            },
+          }}
+        >
+          View Profile
+        </Typography>
+      </Box>
+    )}
 
 
           </Box>
